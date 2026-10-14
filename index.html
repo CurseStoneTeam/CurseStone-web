@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>CurseStone</title>
+  <meta name="description" content="">
+  <link rel="icon" href="https://raw.githubusercontent.com/CurseStoneTeam/CurseStone/stable/logo.svg">
+
+  <script src="js/theme-init.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    .loader {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: grid;
+      place-content: center;
+      justify-items: center;
+      gap: 20px;
+      padding: 24px;
+      text-align: center;
+      color: #09090b;
+      background: #ffffff;
+      font-family: system-ui, "Segoe UI", sans-serif;
+      transition: opacity 0.25s, visibility 0.25s;
+    }
+
+    :root[data-theme="dark"] .loader {
+      color: #ffffff;
+      background: #141518;
+    }
+
+    .loader.is-hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .loader-brand {
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .loader-brand span:last-child {
+      opacity: 0.5;
+    }
+
+    .loader-bar {
+      width: 220px;
+      height: 4px;
+      overflow: hidden;
+      background: rgba(127, 127, 127, 0.25);
+      border-radius: 999px;
+    }
+
+    .loader-bar::before {
+      display: block;
+      width: calc(var(--progress, 0.05) * 100%);
+      height: 100%;
+      content: "";
+      background: currentColor;
+      border-radius: inherit;
+      transition: width 0.25s;
+    }
+
+    .loader-text {
+      min-height: 1.2em;
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 0.65;
+    }
+
+    .loader.has-error .loader-bar {
+      display: none;
+    }
+
+    .loader-retry {
+      padding: 9px 20px;
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: inherit;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid currentColor;
+      border-radius: 8px;
+    }
+
+    .loader-hint {
+      max-width: 420px;
+      margin: 0;
+      font-size: 0.8rem;
+      opacity: 0.55;
+    }
+
+    body.is-loading {
+      overflow: hidden;
+    }
+  </style>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/contributors.css">
+</head>
+<body class="is-loading">
+  <div id="loader" class="loader" role="status" aria-live="polite" data-state="loading">
+    <div class="loader-brand"><span>Curse</span><span>Stone</span></div>
+    <div class="loader-bar"></div>
+    <p id="loader-text" class="loader-text"></p>
+  </div>
+
+  <nav id="sidebar" class="sidebar"></nav>
+
+  <div class="content-wrap">
+    <header class="mobile-bar">
+      <button class="icon-btn" id="menu-toggle" type="button" aria-controls="sidebar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <a href="#introduccion"><span class="tone-a">Curse</span><span class="tone-b">Stone</span></a>
+    </header>
+
+    <div class="content">
+      <div id="breadcrumbs"></div>
+      <main id="page"></main>
+      <div id="pager"></div>
+      <footer id="footer"></footer>
+    </div>
+  </div>
+
+  <noscript>
+    <style>.loader { display: none; } body.is-loading { overflow: auto; }</style>
+  </noscript>
+
+  <script src="js/loader-guard.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
