@@ -12,6 +12,37 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://cursestone.pages.dev/">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CurseStone">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://cursestone.pages.dev/">
+  <meta property="og:title" content="CurseStone - Servidor de código abierto para Minecraft PE 0.15.x">
+  <meta property="og:description" content="Software de servidor de código abierto para Minecraft: Pocket Edition 0.15.x escrito en C y C++20. Alto rendimiento, plugins en Lua, documentación y desarrollo.">
+  <meta property="og:image" content="https://socialify.dev/CurseStoneTeam/CurseStone/image?description=1&amp;font=Inter&amp;forks=1&amp;issues=1&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2FCurseStoneTeam%2FCurseStone%2Fstable%2Flogo.svg&amp;name=1&amp;owner=1&amp;pattern=Transparent&amp;pulls=1&amp;stargazers=1&amp;theme=Dark">
+  <meta property="og:image:alt" content="CurseStone, servidor de Minecraft Pocket Edition">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CurseStone - Servidor de código abierto para Minecraft PE 0.15.x">
+  <meta name="twitter:description" content="Servidor de código abierto para Minecraft PE 0.15.x en C y C++20. Alto rendimiento, plugins en Lua y documentación.">
+  <meta name="twitter:image" content="https://socialify.dev/CurseStoneTeam/CurseStone/image?description=1&amp;font=Inter&amp;forks=1&amp;issues=1&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2FCurseStoneTeam%2FCurseStone%2Fstable%2Flogo.svg&amp;name=1&amp;owner=1&amp;pattern=Transparent&amp;pulls=1&amp;stargazers=1&amp;theme=Dark">
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "CurseStone",
+    "description": "Software de servidor de código abierto para Minecraft: Pocket Edition 0.15.x escrito en C y C++20, enfocado en alto rendimiento.",
+    "url": "https://cursestone.pages.dev/",
+    "codeRepository": "https://github.com/CurseStoneTeam/CurseStone",
+    "programmingLanguage": ["C", "C++"],
+    "runtimePlatform": "Linux, macOS, Windows, Android (Termux)",
+    "license": "https://github.com/CurseStoneTeam/CurseStone"
+  }
+  </script>
+
   <link rel="icon" href="https://raw.githubusercontent.com/CurseStoneTeam/CurseStone/stable/logo.svg" type="image/svg+xml">
 
   <script src="js/theme-init.js"></script>
@@ -135,7 +166,55 @@
 
     <div class="content">
       <div id="breadcrumbs"></div>
-      <main id="page"></main>
+      <main id="page">
+        <!-- Contenido SEO de respaldo: main.js lo reemplaza por completo (page.innerHTML = ...). -->
+        <article data-seo-fallback>
+          <h1>CurseStone: servidor de código abierto para Minecraft PE 0.15.x</h1>
+          <p>
+            CurseStone es un software de servidor de código abierto para Minecraft: Pocket Edition 0.15.x
+            (protocolo 84), escrito en C y C++20 y enfocado en el alto rendimiento. Tiene un núcleo en C puro
+            para red, NBT y datos de chunks, con la lógica del juego en C++20.
+          </p>
+          <p>
+            Es una opción para ejecutar un servidor MCPE pequeño que puedes leer, compilar y modificar,
+            con documentación y desarrollo abiertos en GitHub.
+          </p>
+
+          <h2>Características principales</h2>
+          <ul>
+            <li><strong>Plugins en Lua:</strong> Lua 5.4 integrado en el binario, sin instalar nada más.</li>
+            <li><strong>Dos formatos de mundo:</strong> anvil (por defecto) y leveldb.</li>
+            <li><strong>Generación de terreno:</strong> biomas, ruido y populators incluidos.</li>
+            <li><strong>Diagnósticos integrados:</strong> profiler en tiempo de ejecución y volcados de fallos.</li>
+            <li><strong>Multiplataforma:</strong> Linux, macOS, Windows y Android (Termux).</li>
+          </ul>
+
+          <h2>Documentación</h2>
+          <p>
+            CurseStone cuenta con dos documentaciones: una
+            <a href="https://docs-cursestone.readthedocs.io/">guía inicial en Read the Docs</a>
+            y la <a href="https://cursestoneteam.github.io/">documentación completa del software</a>.
+          </p>
+
+          <h2>Desarrollo y comunidad</h2>
+          <p>
+            El código fuente está en el <a href="https://github.com/CurseStoneTeam/CurseStone">repositorio de GitHub</a>
+            (rama <code>stable</code>). Puedes abrir issues, enviar pull requests y unirte a la comunidad en
+            <a href="https://discord.gg/h6TXynYC8p">Discord</a> o seguir el proyecto en
+            <a href="https://youtube.com/@CurseStoneTeam">YouTube</a>.
+          </p>
+
+          <nav aria-label="Secciones del sitio">
+            <ul>
+              <li><a href="#introduccion">Introducción</a></li>
+              <li><a href="#contribuidores">Contribuidores</a></li>
+              <li><a href="#redes">Redes del proyecto</a></li>
+              <li><a href="#repositorio">Repositorio</a></li>
+              <li><a href="#documentacion">Documentación</a></li>
+            </ul>
+          </nav>
+        </article>
+      </main>
       <div id="pager"></div>
       <footer id="footer"></footer>
     </div>

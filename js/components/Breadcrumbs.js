@@ -12,8 +12,8 @@ export function Breadcrumbs(page) {
         <li aria-current="page">${page.title()}</li>
       </ul>
       <div class="toolbar">
-        <a class="toolbar-link" href="${site.repo.url}" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-github"></i> <span>${t('ui.github')}</span>
+        <a class="toolbar-link" href="${site.repo.url}" target="_blank" rel="noopener noreferrer" aria-label="${t('ui.github')}">
+          <i class="fa-brands fa-github" aria-hidden="true"></i> <span>${t('ui.github')}</span>
         </a>
         ${LanguageToggle()}
         ${ThemeToggle()}
